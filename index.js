@@ -8,6 +8,7 @@ cardData.forEach((data) => {
 });
 
 function createCard(data) {
+    let counter = 0;
 	const card = document.createElement("div");
 
 	card.innerHTML = `
@@ -34,13 +35,41 @@ function createCard(data) {
                                     <p class="card-time-value">${data.time} min</p>
                                 </div>
                             </div>
-                            <button class="card-add-btn">
-                                <span class="card-add-icon"></span> 
-                            </button>
+                            <div class="card-minus-add-btn">
+                                <button class="card-minus-btn custom-hidden">
+                                    <span class="card-minus-icon"></span>
+                                </button>
+                                <div class="card-counter custom-hidden">${counter}</div>
+                                <button class="card-add-btn card-add-btn-left-radius">
+                                    <span class="card-add-icon"></span> 
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
+
+    const addBtn = card.querySelector(".card-add-btn");
+    const minusBtn = card.querySelector(".card-minus-btn");
+    const counterBtn = card.querySelector(".card-counter");
+
+    addBtn.addEventListener("click", () => {
+        counter++;
+        counterBtn.textContent = counter;
+        minusBtn.classList.remove("custom-hidden");
+        counterBtn.classList.remove("custom-hidden");
+        addBtn.classList.remove("card-add-btn-left-radius");
+    });
+
+    minusBtn.addEventListener("click", () => {
+        counter--;
+        counterBtn.textContent = counter;
+        if (counter === 0) {
+            minusBtn.classList.add("custom-hidden");
+            counterBtn.classList.add("custom-hidden");
+            addBtn.classList.add("card-add-btn-left-radius");
+        }
+    });
 
 	return card;
 }

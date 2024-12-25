@@ -272,9 +272,20 @@
 	justify-content: center;
 }
 
-.card-add-btn {
+.card-minus-add-btn {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-width: 1px;
+	border-color: #f3ba00;
+	border-radius: 6px; 
+}
+
+.card-minus-btn {
 	background-color: #f3ba00;
-	border-radius: 5px; /* rounded-md */
+	border-top-left-radius: 5px; /* rounded-md */
+	border-bottom-left-radius: 5px; /* rounded-md */
 	height: 20px;
 	width: 22px;
 	display: flex;
@@ -282,6 +293,44 @@
 	justify-content: center;
 	padding: 8px; /* p-2 */
 	position: relative;
+}
+
+.card-minus-icon {
+	display: block; /* Make the pseudo-element a block */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 3px;
+	width: 14px;
+	background-color: white;
+	border-radius: 5px; /* rounded-md */
+}
+
+.card-counter{
+	display: flex;
+	height: 20px;
+	width: 41px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-add-btn {
+	background-color: #f3ba00;
+	border-top-right-radius: 5px; /* rounded-md */
+	border-bottom-right-radius: 5px; /* rounded-md */
+	height: 20px;
+	width: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px; /* p-2 */
+	position: relative;
+}
+
+.card-add-btn-left-radius {
+	border-top-left-radius: 5px; /* rounded-md */
+	border-bottom-left-radius: 5px; /* rounded-md */	
 }
 
 .card-add-icon {
@@ -305,5 +354,10 @@
 		left: 50%;
 		top: 50%;
 		transform: translateX(-50%) translateY(-50%);
+		border-radius: 5px; /* rounded-md */
 	}
+}
+
+.custom-hidden{
+	display: none;
 }
