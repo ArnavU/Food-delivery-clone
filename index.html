@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                    fontFamily: {
+                       roboto: ['Roboto', 'sans-serif'], 
+                    },
+                }
+              }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+	<body>
+		<section class="hero-section">
+            <nav class="hero-nav">
+              <div class="hero-logo">JTGeats</div>
+              <ul class="hero-nav-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menue</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="hero-search-cart">
+                <button class=""><img src="./assets/akar-icons_search.png" /></button>
+                <button class="hero-cart-btn relative">
+                  <img src="./assets/Card.png" />
+                  <div class="hero-cart-notification"></div> 
+                </button>
+              </div>
+            </nav>
+          
+            <div class="hero-content">
+              <div class="hero-text-image">
+                <div class="hero-text">
+                  <h1 class="hero-heading">Authentic Home food in India</h1>
+                  <p class="hero-description">JTGeats is a courier service in which authentic home cook food is delivered to a customer.</p>
+                  <div class="hero-search-bar">
+                    <input type="text" placeholder="Search food you love" />
+                    <button class="hero-search-btn">Search</button>
+                  </div>
+                </div>
+                <div class="hero-image">
+                  <img src="./assets/cuate.png" alt="Image">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <main class="main-content">
+            <h1 class="main-heading">Home Kitchen</h1>
+            <div id="card-container" class="card-container">  
+            </div>
+          </main>
+	</body>
+
+    <script type="module" src="index.js"></script>
+</html>
