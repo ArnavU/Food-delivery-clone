@@ -125,6 +125,9 @@ body {
 .hero-search-bar input {
 	background-color: white;
 	padding-left: 16px; /* px-4 */
+	height: 100%;
+	width: 100%;
+	color: black;
 }
 
 .hero-search-btn {
