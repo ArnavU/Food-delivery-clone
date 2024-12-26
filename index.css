@@ -4,6 +4,10 @@
 	font-style: normal;
 }
 
+body {
+	background-color: #f7f8fa;
+}
+
 /* Main/here section (the green section) */
 .hero-section {
 	background-color: #1ac073;
@@ -144,7 +148,6 @@
 	padding-right: 128px;
 	padding-top: 64px; /* 16 in tailwind units */
 	padding-bottom: 64px;
-	background-color: #f7f8fa;
 }
 
 .main-heading {
@@ -170,31 +173,38 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	z-index: 100;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+}
+
+.card:hover {
+	box-shadow: 0px 6px 40px 0px #00000024;
+	cursor: pointer;
 }
 
 .card-image {
 	height: 250px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
 }
 
 .card-discount {
 	height: 30px;
 	width: 30px;
-	background-color: #F3BA00;
+	background-color: #f3ba00;
 	border-radius: 5px;
 	color: black;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	font-size: 12px;
 	position: absolute;
-	top:0;
-	left:0; 	
+	top: 0;
+	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-width: 1px;
-	border-color: gray
+	border-color: gray;
 }
 
 .card-content {
@@ -221,7 +231,7 @@
 	height: 20px;
 }
 
-.card-rating-time{
+.card-rating-time {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -279,7 +289,7 @@
 	align-items: center;
 	border-width: 1px;
 	border-color: #f3ba00;
-	border-radius: 6px; 
+	border-radius: 6px;
 }
 
 .card-minus-btn {
@@ -307,7 +317,7 @@
 	border-radius: 5px; /* rounded-md */
 }
 
-.card-counter{
+.card-counter {
 	display: flex;
 	height: 20px;
 	width: 41px;
@@ -330,7 +340,7 @@
 
 .card-add-btn-left-radius {
 	border-top-left-radius: 5px; /* rounded-md */
-	border-bottom-left-radius: 5px; /* rounded-md */	
+	border-bottom-left-radius: 5px; /* rounded-md */
 }
 
 .card-add-icon {
@@ -358,6 +368,65 @@
 	}
 }
 
-.custom-hidden{
+.custom-hidden {
 	display: none;
+}
+
+/* Slider */
+.slide-wrapper {
+	width: 80%;
+	overflow-x: hidden;
+	height: fit-content; /* or min-height: ... if you need a minimum height */
+}
+
+.slider-container {
+	display: flex;
+	gap: 72px;
+	margin-left: 20px;
+	width: 100%;
+	transition: transform 0.5s ease-in-out; /* duration-500 */
+	height: fit-content;
+	padding-bottom: 40px;
+}
+
+.popular-items {
+	padding-left: 128px; /* px-32 */
+	padding-right: 128px;
+	margin-bottom: 128px; /* mb-32 */
+}
+
+.popular-items-heading {
+	margin-top: 48px; /* mt-12 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 800;
+	margin-bottom: 48px; /* mb-12 */
+}
+
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.slide-button {
+	width: 71.5px;
+	height: 71.5px;
+	border-radius: 9999px; /* rounded-full */
+	border: 3px solid #1ac073; /* border-[3px] border-[#1AC073] */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s; /* transition duration-300 */
+}
+
+.left-button img {
+	transform: translateX(-25%); /* -translate-x-1/4 */
+}
+
+.right-button img {
+	transform: translateX(25%) rotate(180deg); /* translate-x-1/4 rotate-180 */
 }

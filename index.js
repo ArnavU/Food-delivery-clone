@@ -7,7 +7,7 @@ cardData.forEach((data) => {
 	cardContainer.appendChild(card);
 });
 
-function createCard(data) {
+export function createCard(data) {
     let counter = 0;
 	const card = document.createElement("div");
 

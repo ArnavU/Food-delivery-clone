@@ -5,96 +5,105 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-              theme: {
-                extend: {
-                    fontFamily: {
-                       roboto: ['Roboto', 'sans-serif'], 
-                    },
-                }
-              }
-            }
-        </script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							roboto: ["Roboto", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+	</head>
 	<body>
 		<section class="hero-section">
-            <nav class="hero-nav">
-              <div class="hero-logo">JTGeats</div>
-              <ul class="hero-nav-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menue</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-              <div class="hero-search-cart">
-                <button class=""><img src="./assets/akar-icons_search.png" /></button>
-                <button class="hero-cart-btn relative">
-                  <img src="./assets/Card.png" />
-                  <div class="hero-cart-notification"></div> 
-                </button>
-              </div>
-            </nav>
-          
-            <div class="hero-content">
-              <div class="hero-text-image">
-                <div class="hero-text">
-                  <h1 class="hero-heading">Authentic Home food in India</h1>
-                  <p class="hero-description">JTGeats is a courier service in which authentic home cook food is delivered to a customer.</p>
-                  <div class="hero-search-bar">
-                    <input type="text" placeholder="Search food you love" />
-                    <button class="hero-search-btn">Search</button>
-                  </div>
-                </div>
-                <div class="hero-image">
-                  <img src="./assets/cuate.png" alt="Image">
-                </div>
-              </div>
-            </div>
-          </section>
+			<nav class="hero-nav">
+				<div class="hero-logo">JTGeats</div>
+				<ul class="hero-nav-items">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Menue</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<div class="hero-search-cart">
+					<button class="">
+						<img src="./assets/akar-icons_search.png" />
+					</button>
+					<button class="hero-cart-btn relative">
+						<img src="./assets/Card.png" />
+						<div class="hero-cart-notification"></div>
+					</button>
+				</div>
+			</nav>
 
-          <main class="main-content">
-            <h1 class="main-heading">Home Kitchen</h1>
-            <div id="card-container" class="card-container">  
-                <!-- <div class="card"> 
-                    <img src="https://s3-alpha-sig.figma.com/img/420b/fcd5/fe043b16575841c6f832b04d318f3481?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n8ofFCGo9zlYB9FKP0XHhhaQ-vZ8-fu4s7M102wKxC3YUxGRRnKj1u32v1i~rgOp1MhQmx-mOTbhg1xRTSzfhmLUENTY0O8WQJRPtOa1esgYvBxKVmVJQPkEtoXTLiibOoXygc8D2pzwmja0no57ZSVpt~q~6LFdZVaSVOcNz1VC8HjFpChtotrXuwireC0FqXHuHXeSelgRArsK82-qIaGs6y6IB1055p7Yp434Shmufhs18DaF6yBVJEY8RTXyZT~5fRz1ui01THrm3ZHffyQLuSOaWojkTd2CBByrMmsXnxllK3UJ8OTEeCO3WtHw~hC87Egy2C-PtaYA27081g__" class="card-image" alt="${data.title}"> 
-                    
-                    <div class="card-content">
-                        <div class="card-title-price">
-                            <p class="card-title">Home made pizza</p>
-                            <p class="card-price">&#8377; 199</p>
-                        </div>
-                        <div class="card-rating-time-add">
-                            <div class="card-rating-time">
-                                <div class="card-rating">
-                                    <img src="./assets/star.png" alt="Rating" class="card-star-icon">
-                                    <p class="card-rating-value">4.7</p>
-                                </div>
-                                <div class="card-time">
-                                    <p class="card-time-value">40-50 min</p>
-                                </div>
-                            </div>
-                            <div class="card-minus-add-btn">
-                                <button class="card-minus-btn">
-                                    <span class="card-minus-icon"></span>
-                                </button>
-                                <div class="card-counter">1</div>
-                                <button class="card-add-btn">
-                                    <span class="card-add-icon"></span> 
-                                </button>
-                            </div>
-                        </div>
+			<div class="hero-content">
+				<div class="hero-text-image">
+					<div class="hero-text">
+						<h1 class="hero-heading">
+							Authentic Home food in India
+						</h1>
+						<p class="hero-description">
+							JTGeats is a courier service in which authentic home
+							cook food is delivered to a customer.
+						</p>
+						<div class="hero-search-bar">
+							<input
+								type="text"
+								placeholder="Search food you love"
+							/>
+							<button class="hero-search-btn">Search</button>
+						</div>
+					</div>
+					<div class="hero-image">
+						<img src="./assets/cuate.png" alt="Image" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main class="main-content">
+			<h1 class="main-heading">Home Kitchen</h1>
+			<div id="card-container" class="card-container"></div>
+		</main>
+
+        <!-- Popular Items -->
+        <section class="popular-items">
+            <h1 class="popular-items-heading">Popular Items</h1>
+            <div class="slider">
+                <!-- Left slide btn -->
+                <button id="left-slider" class="slide-button left-button">
+                    <img id="left-slider-polygon" src="./assets/PolygonLeftPoint.svg" alt="Left Arrow">
+                </button>
+
+                <!-- Slider -->
+                <div id="slide-wrapper" class="slide-wrapper">
+                    <div id="slider-container" class="slider-container">
                     </div>
-                </div> -->
+                </div>
+
+                <!-- Right slide btn -->
+                <button id="right-slider" class="slide-button right-button">
+                    <img id="right-slider-polygon" src="./assets/PolygonLeftPoint.svg" alt="Right Arrow">
+                </button>
             </div>
-          </main>
+        </section>
+
 	</body>
 
-    <script type="module" src="index.js"></script>
+	<script type="module" src="index.js"></script>
+	<script type="module" src="slider.js"></script>
 </html>
