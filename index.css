@@ -462,21 +462,35 @@ body {
 	transform: translateX(25%) rotate(180deg); /* translate-x-1/4 rotate-180 */
 }
 
-
-.foot {
-
+.parent_foot
+{
 	display: flex;
-    width: 1440px;
+	flex-direction: column;
+	width: 1440px;
     height: 137px;
-	gap: 10px;
-
-    background: var(--light-green);
-	margin-top: 30px; 
+	background: var(--light-green);
+	margin-top: 30px;
 	padding: 16px;
 	justify-content: space-around;
 	align-items: center;
 	padding-right: 128px; 
+}
+.foot {
 
+	display: flex;
+    width: 100%;
+	padding: 16px;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.horizontal_line
+{
+	width: 80%;
+	height: 5px;
+	border-top: 2px solid white;
+	line-height: 80%;
+	
 }
 
 .modal {
