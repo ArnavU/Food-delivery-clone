@@ -1,3 +1,28 @@
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
+  body::-webkit-scrollbar{
+    display: none;
+    width: 9px;
+    background-color: #000;
+}
+/* body::-webkit-scrollbar-thumb{
+    background-color: #ace022;
+    border-radius: 50px;
+} */
+
+:root {
+	--light-green: #1ac073;
+	--dark-green: #2ebf91;
+	--yellow: #f3ba00;
+	--white: #f0faf7;
+	--light-white: #f2f2f2;
+}
+
 .squada-one-regular {
 	font-family: "Squada One", serif;
 	font-weight: 400;
@@ -5,6 +30,8 @@
 }
 
 body {
+	overflow-x: hidden;
+	margin: 0px;
 	background-color: #f7f8fa;
 }
 
@@ -40,6 +67,8 @@ body {
 	font-size: 18px;
 	font-weight: 400;
 }
+
+
 
 .hero-nav-items li a {
 	color: white; /* Ensure links are white */
@@ -432,3 +461,199 @@ body {
 .right-button img {
 	transform: translateX(25%) rotate(180deg); /* translate-x-1/4 rotate-180 */
 }
+
+
+.foot {
+
+	display: flex;
+    width: 1440px;
+    height: 137px;
+	gap: 10px;
+
+    background: var(--light-green);
+	margin-top: 30px; 
+	padding: 16px;
+	justify-content: space-around;
+	align-items: center;
+	padding-right: 128px; 
+
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+	z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;  
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .modal-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    background-color: var(--white);
+    margin: 15% auto; 
+    
+    
+    width: 90%; 
+	max-height:800px;
+	border-radius: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .cart{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative; 
+	/* Ensure cart is above the modal */
+	width: 800px;
+	height: 800px;
+	border-radius: 20px;
+	background-color: var(--white); /* Solid white background */
+	z-index: 20; /* Stack above the modal */
+	padding: 20px;
+	/* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); */
+	 /* Add some shadow for clarity */
+  
+  }
+  
+  .cart_img img{
+	width: 197px;
+	height: 225px;
+  
+  }
+  .cart_text1{
+	margin-top: 20px;
+	position: relative;
+	padding: 10px;
+	font-family: Roboto;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: -0.012em;
+	text-align: center;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+  
+  }
+  .cart_text2{
+	/* font-family: Roboto; */
+  position: relative;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.012em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+  }
+  .menuButton{
+	width: 120px;
+	height: 58px;
+
+	border-radius: 10px 10px 10px 10px;
+	background-color: var(--dark-green);
+	
+	color: var(--white);
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: 20px;
+	line-height: 20px;
+	letter-spacing: -0.012em;
+	text-align: center;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+  
+  
+  }
+
+
+  /* ********** */
+
+
+
+  #requestDishModal{
+	 padding: auto;
+  }
+  
+  .modal-content h2 { /* Style the "Request a Dish" heading */
+	padding-top: 60px;
+	font-family: Roboto;
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: -0.012em;
+	text-align: center; 
+  }
+.dishForm{
+	padding-top: 70px;
+}
+  .modal-content input[type="text"] { /* Style both input fields */
+	width: 900px; 
+	height: 48px; 
+	padding: 16px ; 
+	border-radius: 10px;
+	/* Removed: opacity: 0px; */
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+  .dish_button
+  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+	margin-top: 80px;
+	margin-bottom: 74px;
+  }
+  
+  .modal-content .cancelBtn { 
+	width: 210px;
+	height: 58px;
+	padding: 19px 25px; 
+	border-radius: 10px;
+	box-sizing: border-box; 
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: -0.012em;
+	text-align: center;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	border: 1px solid #1AC073;
+	color: #1AC073;
+
+  }
+  
+  .modal-content button[type="submit"] {
+	width: 210px;
+	height: 58px;
+	box-sizing: border-box; 
+	border-radius: 10px;
+	background-color: #1AC073;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: -0.012em;
+	color: #FFFFFF;
+  }
+

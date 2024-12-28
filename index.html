@@ -1,157 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						fontFamily: {
-							roboto: ["Roboto", "sans-serif"],
-						},
-					},
-				},
-			};
-		</script>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="index.css" />
-	</head>
-	<body class="mb-12">
-		<section class="hero-section">
-			<nav class="hero-nav">
-				<div class="hero-logo">JTGeats</div>
-				<ul class="hero-nav-items">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Menue</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-				<div class="hero-search-cart">
-					<button class="">
-						<img src="./assets/akar-icons_search.png" />
-					</button>
-					<button class="hero-cart-btn relative">
-						<img src="./assets/Card.png" />
-						<div class="hero-cart-notification"></div>
-					</button>
-				</div>
-			</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-			<div class="hero-content">
-				<div class="hero-text-image">
-					<div class="hero-text">
-						<h1 class="hero-heading">
-							Authentic Home food in India
-						</h1>
-						<p class="hero-description">
-							JTGeats is a courier service in which authentic home
-							cook food is delivered to a customer.
-						</p>
-						<div class="hero-search-bar">
-							<input
-								type="text"
-								placeholder="Search food you love"
-							/>
-							<button class="hero-search-btn">Search</button>
-						</div>
-					</div>
-					<div class="hero-image">
-						<img src="./assets/cuate.png" alt="Image" />
-					</div>
-				</div>
-			</div>
-		</section>
+  <body class="mb-12">
+    <section class="hero-section">
+      <nav class="hero-nav">
+        <div class="hero-logo">JTGeats</div>
+        <ul class="hero-nav-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menue</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hero-search-cart">
+          <button class="">
+            <img src="./assets/akar-icons_search.png" />
+          </button>
+          <button class="hero-cart-btn relative">
+            <img id="myBtn" src="./assets/Card.png" />
+            <div class="hero-cart-notification"></div>
+          </button>
+        </div>
+      </nav>
 
-		<main class="main-content">
-			<h1 class="main-heading">Home Kitchen</h1>
-			<div id="card-container" class="card-container"></div>
-		</main>
-
-        <!-- Popular Items -->
-        <section class="popular-items">
-            <h1 class="popular-items-heading">Popular Items</h1>
-            <div class="slider">
-                <!-- Left slide btn -->
-                <button id="left-slider" class="slide-button left-button">
-                    <img id="left-slider-polygon" src="./assets/PolygonLeftPoint.svg" alt="Left Arrow">
-                </button>
-
-                <!-- Slider -->
-                <div id="slide-wrapper" class="slide-wrapper">
-                    <div id="slider-container" class="slider-container">
-                    </div>
-                </div>
-
-                <!-- Right slide btn -->
-                <button id="right-slider" class="slide-button right-button">
-                    <img id="right-slider-polygon" src="./assets/PolygonLeftPoint.svg" alt="Right Arrow">
-                </button>
+      <div class="hero-content">
+        <div class="hero-text-image">
+          <div class="hero-text">
+            <h1 class="hero-heading">Authentic Home food in India</h1>
+            <p class="hero-description">
+              JTGeats is a courier service in which authentic home cook food is
+              delivered to a customer.
+            </p>
+            <div class="hero-search-bar">
+              <input type="text" placeholder="Search food you love" />
+              <button class="hero-search-btn">Search</button>
             </div>
-        </section>
+          </div>
+          <div class="hero-image">
+            <img src="./assets/cuate.png" alt="Image" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Request Dish -->
-        <div class="flex justify-center items-center">
-            <button class="w-[210px] rounded-[10px] bg-[#1AC073] py-[19px] px-[25px] font-roboto text-[16px] text-white font-[700] mt-28 mb-32">Request a Dish</button>
+    <main class="main-content">
+      <h1 class="main-heading">Home Kitchen</h1>
+      <div id="card-container" class="card-container"></div>
+    </main>
+
+    <!-- Popular Items -->
+    <section class="popular-items">
+      <h1 class="popular-items-heading">Popular Items</h1>
+      <div class="slider">
+        <!-- Left slide btn -->
+        <button id="left-slider" class="slide-button left-button">
+          <img
+            id="left-slider-polygon"
+            src="./assets/PolygonLeftPoint.svg"
+            alt="Left Arrow"
+          />
+        </button>
+
+        <!-- Slider -->
+        <div id="slide-wrapper" class="slide-wrapper">
+          <div id="slider-container" class="slider-container"></div>
         </div>
 
-        <!-- Video Section -->
-        <div class="w-screen mb-32">
-            
-            <div class="w-[877px] w-[442px] flex items-center justify-center mx-auto">
-                <iframe width="1519" height="574" src="https://www.youtube.com/embed/DBrFv02bSsI?autoplay=1" title="How To Make Pixel Perfect Designs With WordPress - EASY!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="bg-[#C7EACC] h-[344px] w-full -mt-48 "></div>
+        <!-- Right slide btn -->
+        <button id="right-slider" class="slide-button right-button">
+          <img
+            id="right-slider-polygon"
+            src="./assets/PolygonLeftPoint.svg"
+            alt="Right Arrow"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!-- Request Dish -->
+    <div class="flex justify-center items-center">
+      <button id="requestDishBtn"
+        class="w-[210px] rounded-[10px] bg-[#1AC073] py-[19px] px-[25px] font-roboto text-[16px] text-white font-[700] mt-28 mb-32"
+      >
+        Request a Dish
+      </button>
+    </div>
+
+    <!-- Video Section -->
+    <div class="w-screen mb-32">
+      <div class="w-[877px] w-[442px] flex items-center justify-center mx-auto">
+        <iframe
+          width="1519"
+          height="574"
+          src="https://www.youtube.com/embed/DBrFv02bSsI?autoplay=1"
+          title="How To Make Pixel Perfect Designs With WordPress - EASY!"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="bg-[#C7EACC] h-[344px] w-full -mt-48"></div>
+    </div>
+
+    <!-- Form -->
+    <div class="flex flex-row mx-32 justify-between items-start">
+      <!-- left container -->
+      <div class="flex flex-col w-[45%]">
+        <!-- header -->
+        <div class="flex-col mb-8 w-full">
+          <div class="font-roboto font-[400] text-[24px] leading-[24px]">
+            <h1 class="">Do you have a question</h1>
+            <h1 class="">or want to become a seller?</h1>
+          </div>
+          <p class="font-roboto font-[400] text-[12px] leading-[20px] mt-2">
+            Fill this form and our manager will contact you next 48 hours.
+          </p>
         </div>
-            
-            <!-- Form -->
-        <div class="flex flex-row mx-32 justify-between items-start">
-            <!-- left container -->
-            <div class="flex flex-col w-[45%]">
-                <!-- header -->
-                <div class="flex-col mb-8 w-full">
-                    <div class="font-roboto font-[400] text-[24px] leading-[24px]">
-                        <h1 class="">Do you have a question</h1>
-                        <h1 class="">or want to become a seller?</h1>
-                    </div>
-                    <p class="font-roboto font-[400] text-[12px] leading-[20px] mt-2" >Fill this form and our manager will contact you next 48 hours.</p>
 
-                </div>
+        <!-- actual form -->
+        <div class="flex flex-col gap-8 w-full">
+          <div class="flex flex-row gap-8 w-full">
+            <input
+              class="font-roboto text-[16px] font-[400] flex items-center justify-center placeholder:text-[#929292] h-[58px] rounded-[10px] px-[22px] w-full"
+              placeholder="Your Name"
+            />
+            <input
+              class="font-roboto text-[16px] font-[400] flex items-center justify-center placeholder:text-[#929292] h-[58px] rounded-[10px] px-[22px] w-full"
+              placeholder="Your Email"
+            />
+          </div>
+          <textarea
+            class="placeholder:text-[16px] font-[400] font-roboto pt-[19px] pl-[22px] w-full h-[164px]"
+            placeholder="Your message"
+          ></textarea>
 
-                <!-- actual form -->
-                <div class="flex flex-col gap-8 w-full">
-                    <div class="flex flex-row gap-8 w-full">
-                        <input class="font-roboto text-[16px] font-[400] flex items-center justify-center placeholder:text-[#929292] h-[58px] rounded-[10px] px-[22px] w-full" placeholder="Your Name" />
-                        <input class="font-roboto text-[16px] font-[400] flex items-center justify-center placeholder:text-[#929292] h-[58px] rounded-[10px] px-[22px] w-full" placeholder="Your Email" />
-                    </div>
-                    <textarea class="placeholder:text-[16px] font-[400] font-roboto pt-[19px] pl-[22px] w-full h-[164px]" placeholder="Your message"></textarea>
+          <button
+            class="h-[58px] w-[210px] flex items-center justify-center rounded-[10px] bg-[#1AC073] font-roboto font-[400] text-[16px] text-[white]"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
 
-                    <button class="h-[58px] w-[210px] flex items-center justify-center rounded-[10px] bg-[#1AC073] font-roboto font-[400] text-[16px] text-[white]">
-                        Submit
-                    </button>
-                </div>
-            </div>
+      <!-- right image -->
+      <div class="pt-[2px]">
+        <img
+          src="./assets/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration.svg"
+          alt="food delivery man"
+          class="w-[503px] h-[402]"
+        />
+      </div>
+    </div>
+  </body>
 
-            <!-- right image -->
-            <div class="pt-[2px]">
-                <img src="./assets/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration.svg" alt="food delivery man" class="w-[503px] h-[402]" />
-            </div>
+  <footer class="foot">
+    <div class="hero-logo">JTGeats</div>
+    <ul class="hero-nav-items">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Menue</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="hero-search-cart">
+      <button class="">
+        <img src="./assets/iconoir_add-to-cart.svg" />
+      </button>
+      <button class="hero-cart-btn relative">
+        <img src="assets/facebook.png" />
+        <!-- <div class="hero-cart-notification"></div> -->
+      </button>
+    </div>
+  </footer>
+
+  <!-- Cart Button -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close"></span>
+
+      <div class="cart">
+        <div class="cart_img">
+          <img src="assets/akar-icons_shopping-bag.svg" alt="Shopping_bag" />
         </div>
 
-	</body>
+        <div class="cart_text">
+          <p class="cart_text1">Cart is Empty</p>
+          <p class=".cart_text2">Add some items to the cart to checkout</p>
+        </div>
 
-	<script type="module" src="index.js"></script>
-	<script type="module" src="slider.js"></script>
+        <button class="menuButton">Back to Menu</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Request a Dish Button -->
+
+
+  <div id="requestDishModal" class="modal">
+
+    <div  class="modal-content">
+
+      <span class="close"></span>
+
+      <h2>Request a Dish</h2>
+      <form class="dishForm">
+        <label for="dishName">Name*:</label><br />
+        <input
+          type="text"
+          id="dishName"
+          name="dishName"
+          placeholder="Enter name of the dish"
+        /><br /><br />
+
+        <label for="dishImage">Upload an Image:</label><br />
+        <input
+          type="text"
+          id="dishImage"
+          name="dishImage"
+          placeholder="Paste a URL"
+        /><br /><br />
+
+		<div class="dish_button">
+
+			<button type="button" class="cancelBtn">Cancel</button>
+			<button type="submit">Submit Request</button>
+
+		</div>
+
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="index.js"></script>
+  <script type="module" src="slider.js"></script>
 </html>
