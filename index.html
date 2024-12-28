@@ -121,84 +121,74 @@
 		</div>
 
 		<!-- Video Section -->
-		<div class="w-screen mb-32">
-			<div class="mb-12">
+		<div class="video-section">
+			<div class="video-content">
 				<h2 class="montserrat-700">
 					We are providing best <br />
 					home cooked food delivery service.
 				</h2>
-				<p class="montserrat-500">Away from home and craving the tasty homemade recipes? <br />
-					Choose from a selection of our delicious home cooked dishes </p>
+				<p class="montserrat-500">
+					Away from home and craving the tasty homemade recipes?
+					<br />
+					Choose from a selection of our delicious home cooked dishes
+				</p>
 			</div>
-			<div
-				class="w-[877px] w-[442px] flex items-center justify-center mx-auto"
-			>
+			<div class="video-container">
 				<iframe
-					width="1519"
-					height="574"
+					width="877"
+					height="494"
 					src="https://www.youtube.com/embed/DBrFv02bSsI?autoplay=1"
-					title="How To Make Pixel Perfect Designs With WordPress - EASY!"
+					title="Your Video Title"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
-					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen
-				></iframe>
+				>
+				</iframe>
 			</div>
-			<div class="bg-[#C7EACC] h-[344px] w-full -mt-48"></div>
+			<div class="video-background"></div>
 		</div>
 
-		<!-- Form -->
-		<div class="flex flex-row mx-32 justify-between items-start mb-20">
-			<!-- left container -->
-			<div class="flex flex-col w-[45%]">
-				<!-- header -->
-				<div class="flex-col mb-8 w-full">
-					<div
-						class="font-roboto font-[400] text-[24px] leading-[24px]"
-					>
-						<h1 class="">Do you have a question</h1>
-						<h1 class="">or want to become a seller?</h1>
+		<!-- Form section -->
+		<div class="form-section">
+			<div class="form-container">
+				<!-- Actual form -->
+				<div class="form-content">
+					<div class="form-header">
+						<h1 class="form-title">Do you have a question</h1>
+						<h1 class="form-title">or want to become a seller?</h1>
+						<p class="form-description">
+							Fill this form and our manager will contact you next
+							48 hours.
+						</p>
 					</div>
-					<p
-						class="font-roboto font-[400] text-[12px] leading-[20px] mt-2"
-					>
-						Fill this form and our manager will contact you next 48
-						hours.
-					</p>
+					<div class="form-fields">
+						<div class="form-row">
+							<input
+								type="text"
+								class="form-input"
+								placeholder="Your Name"
+							/>
+							<input
+								type="email"
+								class="form-input"
+								placeholder="Your Email"
+							/>
+						</div>
+						<textarea
+							class="form-textarea"
+							placeholder="Your message"
+						></textarea>
+						<button class="form-submit-button">Submit</button>
+					</div>
 				</div>
 
-				<!-- actual form -->
-				<div class="flex flex-col gap-8 w-full">
-					<div class="flex flex-row gap-8 w-full">
-						<input
-							class="font-roboto text-[16px] font-[400] flex items-center justify-center placeholder:text-[#929292] h-[58px] rounded-[10px] px-[22px] w-full"
-							placeholder="Your Name"
-						/>
-						<input
-							class="font-roboto text-[16px] font-[400] flex items-center justify-center placeholder:text-[#929292] h-[58px] rounded-[10px] px-[22px] w-full"
-							placeholder="Your Email"
-						/>
-					</div>
-					<textarea
-						class="placeholder:text-[16px] font-[400] font-roboto pt-[19px] pl-[22px] w-full h-[164px]"
-						placeholder="Your message"
-					></textarea>
-
-					<button
-						class="h-[58px] w-[210px] flex items-center justify-center rounded-[10px] bg-[#1AC073] font-roboto font-[400] text-[16px] text-[white]"
-					>
-						Submit
-					</button>
+				<!-- Right image -->
+				<div class="form-image">
+					<img
+						src="./assets/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration.svg"
+						alt="food delivery man"
+					/>
 				</div>
-			</div>
-
-			<!-- right image -->
-			<div class="pt-[2px]">
-				<img
-					src="./assets/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration.svg"
-					alt="food delivery man"
-					class="w-[503px] h-[402]"
-				/>
 			</div>
 		</div>
 
@@ -254,10 +244,9 @@
 	</div>
 
 	<!-- Request a Dish modal -->
-	<div id="requestDishModal" class="modal">
+	<div id="requestDishModal" class="dish-modal">
 		<span class="close"></span>
-		<div class="modal-content">
-
+		<div class="dish-modal-content">
 			<h2>Request a Dish</h2>
 			<form class="dishForm">
 				<label for="dishName">Name*:</label><br />
