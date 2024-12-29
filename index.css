@@ -1155,11 +1155,13 @@ body {
     .video-container iframe {
 		width: 100%;
         height: 300px;  
-		top: 20%;
+		top: -25%;
     }
 
 	.video-container{
 		width: 85vw;
+		height: 300px;
+		margin-top: 35px;
 	}
 
     .montserrat-700 {
