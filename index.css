@@ -934,7 +934,7 @@ body {
         position: absolute;
         top: 50px; 											
         left: 0;
-        width: 40%; 													
+        width: fit-content; 													
         /* background-color: var(--light-green); */
         padding: 20px;
 		margin-left: 70%;
