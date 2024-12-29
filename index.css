@@ -32,6 +32,7 @@ body {
 	overflow-x: hidden;
 	margin: 0px;
 	background-color: #f7f8fa;
+	max-width: 100vw;
 }
 
 .hero-section {
@@ -44,8 +45,7 @@ body {
 	height: 80px;
 	display: flex;
 	align-items: center;
-	padding-left: 128px; 
-	padding-right: 128px;
+	justify-content: center;
 }
 
 .hero-logo {
@@ -205,8 +205,8 @@ body {
 
 /* Card container */
 .main-content {
-	padding-left: 128px; 
-	padding-right: 128px;
+	margin: 0 auto;
+	width: 80%;
 	padding-top: 64px; 
 	padding-bottom: 64px;
 }
@@ -926,26 +926,36 @@ body {
 
     .hero-nav-items {
         display: none; 
-		
     }
 
     .hero-nav-items.show { 
         display: flex;
         flex-direction: column; 					
         position: absolute;
-        top: 80px; 											
+        top: 50px; 											
         left: 0;
         width: 40%; 													
-        background-color: var(--light-green);
+        /* background-color: var(--light-green); */
         padding: 20px;
 		margin-left: 70%;
+		background: gray;
+		border-radius: 5px;
+    }
+	
+    .hero-nav-items.show li {
+		margin-bottom: 10px;
     }
 
-    .hero-nav-items.show li {
-        margin-bottom: 10px; 
-    }
 	.cart-modal-content{
 		overflow-x: hidden;
+	}
+
+	.card-rating-time-add {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 20px;
 	}
 }
 
@@ -959,14 +969,11 @@ body {
 
     .hero-search-cart-mobile { 
         display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		margin-left: 0px;
+		gap: 10px; 
 
     }
-	.search-btn{
-		
-		margin-bottom: 20px;
-	}
 }
 
 /* ******* searh bar and  cooking img ********** */
@@ -977,18 +984,31 @@ body {
 		overflow-x: hidden;
 	}
 
+	.hero-content {
+		display: flex;
+		width: 100vw;
+		overflow: hidden;
+		padding-top: 0px;
+	}
+
     .hero-text-image {
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
-        padding-right: 20px; 
-		padding-top: 160px;
+		width: 100vw;
+		justify-content: center;
+		gap: 50px;
 		
     }
 
     .hero-text {
-        width: 100%; 
+        width: 100vw; 
         margin-bottom: 20px; 
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		justify-content: center;
+		align-items: center;
     }
 
     .hero-heading {
@@ -1009,12 +1029,12 @@ body {
 		margin-top: 50px;
     }
 
-    .hero-image img {
-
+    .hero-image {
 		height: 300px;
 		width: 290px;
-		margin-right: 360px;
-		
+    }
+    .hero-image img {
+		height: 100%;
     }
 }
 
@@ -1024,19 +1044,13 @@ body {
 @media (max-width: 768px) {
 
     .main-content {
-		margin-top: 120px;
-       
+       	width: 95%;
     }
 	.main-heading{
 		
 		font-weight: 800;
 		font-size: 30px;
 	}
-
-	.card {
-        width: 90%; 
-        margin-bottom: 20px; 
-    }
 
     .card-image {
         height: 150px; 
@@ -1049,18 +1063,20 @@ body {
 
     
     .card-title-price {
-        font-size: 14px; 
+        font-size: 10px; 
     }
 
     .card-rating-value, .card-time-value {
-        font-size: 10px;
+        font-size: 8px;
     }
+
+
+
 	.card-container {
 		display: flex;
-		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		gap: 2px; 
+		gap: 20px 2px;
 	}
 	
 }
@@ -1075,8 +1091,12 @@ body {
         padding-right: 20px; 
     }
 
+	.popular-items-heading {
+		font-size: 30px;
+	}
+
     .slider {
-        flex-direction: column; 
+        flex-direction: row; 
         align-items: center; 
     }
 
@@ -1085,8 +1105,25 @@ body {
         height: 50px; 
         margin-bottom: 10px;
     }
+
+	.left-button {
+		border-radius: 100%;
+		height: 55px;
+		width: 55px;
+	}
+	
+	.right-button > img {
+		width: 10px;
+	}
+	
 	.right-button{
-		margin-top: 10px;
+		border-radius: 100%;
+		height: 55px;
+		width: 55px;
+	}
+	
+	.left-button > img {
+		width: 10px;
 	}
 
     .slide-wrapper {
@@ -1100,7 +1137,7 @@ body {
     }
 
     .card { 
-        width: 220px; 
+        width: 150px; 
     }
 
     .card-image {
@@ -1131,6 +1168,10 @@ body {
     .montserrat-500 {
         font-size: 14px; 
     }
+
+	.video-section {
+		margin-bottom: 0px;
+	}
 }
 
 /* ****** request dish button ******** */
@@ -1182,11 +1223,15 @@ body {
         align-items: center; 
         margin-left: 20px; 
         margin-right: 20px; 
+		margin-top: 0px;
     }
-
+	
     .form-container {
-        flex-direction: column;
-        align-items: center; 
+		display: flex;
+		flex-wrap: wrap-reverse;
+        flex-direction: row;
+        align-items: space-between; 
+		justify-content: center;
     }
 
     .form-content {
