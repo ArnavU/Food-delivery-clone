@@ -95,8 +95,8 @@ const rightSlider = document.getElementById('right-slider');
 const rightSliderPolygon = document.getElementById('right-slider-polygon');
 
 let translate = 0;
-let slideWidth = 344; // Adjust this to the width of your cards + gap
-let totalWidth = (12*277 + 792); // single card + gaps || 277 + (11*72)
+let slideWidth = 344; 
+let totalWidth = (12*277 + 792); 
 let slideWidthRemaining = totalWidth - widthOfSliderContainer;
 
 rightSlider.addEventListener('click', () => {
@@ -149,26 +149,25 @@ rightSlider.addEventListener('mouseout', () => {
 
 // *********CART MODAL*********
 
-// Get the modal
+
 var modal = document.getElementById("myModal");
   
-// Get the button that opens the modal
+
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
+
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -176,34 +175,25 @@ window.onclick = function(event) {
 }
 
 
-// Get the modal
+
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal (replace with your actual button ID)
-// var btn = document.getElementById("myBtn"); 
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Get the "Back to Menu" button
+
 var menuButton = document.querySelector(".menuButton"); 
 
-// When the user clicks the button, open the modal (if you have a button to open it)
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
 
-// When the user clicks on <span> (x), close the modal
+
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks the "Back to Menu" button, close the modal
 menuButton.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -213,58 +203,37 @@ window.onclick = function(event) {
 
 // *********request Dish*********
 
-// In your index.js
-
-// ... (your existing JavaScript code) ...
-
-// Get the "Request a Dish" modal
 var requestDishModal = document.getElementById("requestDishModal");
 
-// Get the "Request a Dish" button
 var requestDishBtn = document.getElementById("requestDishBtn");
 
-// Get the <span> element that closes the "Request a Dish" modal
 var requestDishClose = requestDishModal.querySelector(".close"); 
 
-// Get the "Cancel" button in the "Request a Dish" modal
 var cancelBtn = requestDishModal.querySelector(".cancelBtn");
 
-// When the user clicks the "Request a Dish" button, open the modal
 requestDishBtn.onclick = function() {
   requestDishModal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the "Request a Dish" modal
 requestDishClose.onclick = function() {
   requestDishModal.style.display = "none";
 }
 
-// When the user clicks the "Cancel" button, close the "Request a Dish" modal
 cancelBtn.onclick = function() {
   requestDishModal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the "Request a Dish" modal, close it
-// window.onclick = function(event) {
-//   if (event.target == requestDishModal) {
-//     requestDishModal.style.display = "none";
-//   }
-// }
-
-
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-    if (event.target == requestDishModal) { // Added condition for the new modal
+    if (event.target == requestDishModal) { 
       requestDishModal.style.display = "none";
     }
   }
 
 // ***************** responsive code *******
-// ... (Your existing JavaScript) ...
+
 
 const hamburger = document.querySelector('.hamburger');
 const navItems = document.querySelector('.hero-nav-items');
