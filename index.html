@@ -29,38 +29,63 @@
 		<link rel="stylesheet" href="index.css" />
 	</head>
 
-	<body class="">
+	<body >
+
 		<section class="hero-section">
+
+
 			<nav class="hero-nav">
+
 				<div class="hero-logo">JTGeats</div>
+
+				<button class="hamburger">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</button> 
+				
+
+				
 				<ul class="hero-nav-items">
+
+					
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="#">Menue</a></li>
+					<li><a href="#">Menu</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Contact</a></li>
+					
+
+					<li class="hero-search-cart-mobile"> 
+						<button class="search-btn">
+							<img src="./assets/akar-icons_search.png" />
+						</button>
+						<button class="hero-cart-btn relative">
+							<img id="myBtn" src="./assets/Card.png" />
+							<div class="hero-cart-notification"></div>
+						</button>
+					</li>
+
 				</ul>
-				<div class="hero-search-cart">
-					<button class="">
-						<img src="./assets/akar-icons_search.png" />
-					</button>
-					<button class="hero-cart-btn relative">
-						<img id="myBtn" src="./assets/Card.png" />
-						<div class="hero-cart-notification"></div>
-					</button>
-				</div>
+				
+
 			</nav>
 
 			<div class="hero-content">
+
 				<div class="hero-text-image">
+
 					<div class="hero-text">
+
 						<h1 class="hero-heading">
 							Authentic Home food in India
 						</h1>
+
 						<p class="hero-description">
 							JTGeats is a courier service in which authentic home
 							cook food is delivered to a customer.
 						</p>
+
 						<div class="hero-search-bar">
 							<input
 								type="text"
@@ -68,13 +93,19 @@
 							/>
 							<button class="hero-search-btn">Search</button>
 						</div>
+
 					</div>
+
 					<div class="hero-image">
 						<img src="./assets/cuate.png" alt="Image" />
 					</div>
+
 				</div>
+				
 			</div>
+
 		</section>
+
 
 		<main class="main-content">
 			<h1 class="main-heading">Home Kitchen</h1>
@@ -83,7 +114,9 @@
 
 		<!-- Popular Items -->
 		<section class="popular-items">
+
 			<h1 class="popular-items-heading">Popular Items</h1>
+
 			<div class="slider">
 				<!-- Left slide btn -->
 				<button id="left-slider" class="slide-button left-button">
@@ -107,7 +140,9 @@
 						alt="Right Arrow"
 					/>
 				</button>
+
 			</div>
+
 		</section>
 
 		<!-- Request Dish -->
@@ -122,17 +157,22 @@
 
 		<!-- Video Section -->
 		<div class="video-section">
+
 			<div class="video-content">
+
 				<h2 class="montserrat-700">
 					We are providing best <br />
 					home cooked food delivery service.
 				</h2>
+
 				<p class="montserrat-500">
 					Away from home and craving the tasty homemade recipes?
 					<br />
 					Choose from a selection of our delicious home cooked dishes
 				</p>
+				
 			</div>
+
 			<div class="video-container">
 				<iframe
 					width="877"
@@ -145,7 +185,9 @@
 				>
 				</iframe>
 			</div>
+
 			<div class="video-background"></div>
+
 		</div>
 
 		<!-- Form section -->
@@ -193,10 +235,13 @@
 		</div>
 
 		<!-- Footer -->
-		<footer class="parent_foot">
-			<div class="foot">
+		<footer id="parent_foot-id" class="parent_foot">
+
+			<div id="foot_id" class="foot">
+
 				<div class="hero-logo">JTGeats</div>
-				<ul class="hero-nav-items">
+				
+				<ul id="hero-nav-items_id" class="hero-nav-items">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Menue</a></li>
@@ -204,7 +249,7 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 
-				<div class="hero-search-cart">
+				<div id="hero-search-cart_id" class="hero-search-cart">
 					<button class="">
 						<img src="./assets/iconoir_add-to-cart.svg" />
 					</button>
@@ -213,9 +258,13 @@
 						<!-- <div class="hero-cart-notification"></div> -->
 					</button>
 				</div>
+
 			</div>
+
 			<hr class="horizontal_line" />
+			
 		</footer>
+
 	</body>
 
 	<!-- Cart Modal -->

@@ -263,4 +263,12 @@ window.onclick = function(event) {
     }
   }
 
-// *****************
+// ***************** responsive code *******
+// ... (Your existing JavaScript) ...
+
+const hamburger = document.querySelector('.hamburger');
+const navItems = document.querySelector('.hero-nav-items');
+
+hamburger.addEventListener('click', () => {
+    navItems.classList.toggle('show');
+});

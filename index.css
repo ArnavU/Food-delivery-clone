@@ -44,7 +44,7 @@ body {
 	padding: 16px;
 	height: 80px;
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: center; */
 	align-items: center;
 	padding-left: 128px; /* 32 in tailwind units */
 	padding-right: 128px;
@@ -59,13 +59,18 @@ body {
 
 .hero-nav-items {
 	display: flex;
-	list-style: none; /* Remove bullet points */
-	gap: 40px; /* space-x-4 */
-	color: white;
+	list-style: none; 
+	gap: 40px; 
 	font-family: "Roboto", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
+	margin-left:285px ;
+	
 }
+#hero-nav-items_id{
+	margin-left: 10px;
+}
+
 
 .hero-nav-items li a {
 	color: white; /* Ensure links are white */
@@ -76,11 +81,19 @@ body {
 	display: flex;
 	gap: 16px; /* space-x-4 */
 	height: 24px;
+	
 }
 
-.hero-cart-btn {
-	/* ... */
+.hero-search-cart-mobile{
+
+	margin-left: 165px;
+	
 }
+
+.hero-cart-btn{
+	margin-left: 35px;
+}
+
 
 .hero-cart-notification {
 	position: absolute;
@@ -90,6 +103,30 @@ body {
 	width: 8px;
 	border-radius: 9999px; /* rounded-full */
 	background-color: #f3ba00;
+}
+/* ... (Your existing styles) ... */
+
+@media (max-width: 768px) {
+    /* ... (Your existing media query styles) ... */
+
+    .hero-cart-btn {
+     
+        display: flex;
+		
+		margin-left: 0px;
+		
+        /* align-items: center; */
+    }
+
+    .hero-cart-notification {
+        position: relative;
+
+        height: 8px;
+        width: 8px;
+		margin-left: -8px;
+        border-radius: 9999px;
+        background-color: #f3ba00;
+    }
 }
 
 .hero-content {
@@ -215,6 +252,7 @@ body {
 
 .card-image {
 	height: 250px;
+	object-fit: cover;
 }
 
 .card-discount {
@@ -466,11 +504,13 @@ body {
 	height: 137px;
 	background: var(--light-green);
 	margin-top: 30px;
-	padding: 16px;
+	/* margin-left: 100px; */
+	padding: 20px;
 	justify-content: space-around;
 	align-items: center;
 	padding-right: 128px;
 }
+
 
 /* Video section */
 .video-section {
@@ -622,12 +662,13 @@ body {
 }
 /* End form section */
 
-.foot {
+.foot{
 	display: flex;
 	width: 100%;
 	padding: 16px;
 	justify-content: space-around;
 	align-items: center;
+	margin-left: 11px;
 }
 .horizontal_line {
 	width: 80%;
@@ -856,3 +897,417 @@ body {
 	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.4);
 }
+
+/* ********** responsive code ************ */
+
+  /* ... (Your existing styles) ... */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    /* padding: 10px;  */
+    margin-right: 16px; /* Add some space to the right */
+	z-index: 100
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0; 
+}
+
+
+
+@media (max-width: 768px) { 
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+
+    }
+	
+	.hero-nav {
+		padding: 16px;
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px; 
+		padding-right: 20px;
+	}
+
+    .hero-nav-items {
+        display: none; 
+		/* margin: 0px; */
+    }
+
+    /* Add styles for the sidebar (you'll need to position and style this) */
+    .hero-nav-items.show { 
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 80px; /* Position below the navbar */
+        left: 0;
+        width: 40%; /* Adjust width as needed */
+        background-color: var(--light-green);
+        padding: 20px;
+		margin-left: 70%;
+    }
+
+    .hero-nav-items.show li {
+        margin-bottom: 10px; 
+    }
+	.cart-modal-content{
+		overflow-x: hidden;
+	}
+}
+
+
+@media (max-width: 768px) { 
+  
+
+	.hero-search-cart {
+        display: none; /* Hide the original search/cart */
+    }
+
+    .hero-search-cart-mobile { /* Style the search/cart in the sidebar */
+        display: flex;
+		flex-direction: column;
+		margin-left: 0px;
+
+    }
+	.search-btn{
+		/* padding-bottom: 10px; */
+		margin-bottom: 20px;
+	}
+}
+
+/* ******* searh bar and  cooking img ********** */
+
+@media (max-width: 768px) { 
+    /* ... (Your existing media query styles) ... */
+
+    .hero-text-image {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center the content horizontally */
+        text-align: center; /* Center the text */
+        padding-right: 20px; 
+		padding-top: 200px;
+    }
+
+    .hero-text {
+        width: 100%; /* Make text container take full width */
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
+    .hero-heading {
+        font-size: 32px; /* Reduce heading size */
+        line-height: 1.2; 
+		width: 80%
+    }
+
+    .hero-description {
+        width: 80%; 
+		
+        font-size: 16px; 
+		line-height: 20px;
+    }
+
+    .hero-search-bar {
+        width: 80%; /* Make search bar responsive */
+    }
+
+    .hero-image img {
+
+		height: 300px;
+		width: 290px;
+		margin-right: 360px;
+		
+    }
+}
+
+
+/* ************** main content ********* */
+
+@media (max-width: 768px) {
+
+    .main-content {
+		margin-top: 120px;
+        /* padding-left: 20px; 
+        padding-right: 20px;  */
+    }
+	.main-heading{
+		/* padding-left: 50px;  */
+        /* padding-right: 20px;  */
+		font-weight: 800;
+		font-size: 30px;
+	}
+
+	.card {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    .card-image {
+        height: 150px; /* Adjust image height as needed */
+		object-fit: cover;
+    }
+
+    .card-content {
+        padding: 12px; /* Reduce padding within the card */
+    }
+
+    /* You might also want to adjust font sizes within the card */
+    .card-title-price {
+        font-size: 14px; 
+    }
+
+    .card-rating-value, .card-time-value {
+        font-size: 10px;
+    }
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 2px; /* gap-y-8 */
+	}
+	
+}
+
+/* ******** popular item ************ */
+
+@media (max-width: 768px) {
+    
+
+    .popular-items {
+        padding-left: 20px; /* Reduce padding on smaller screens */
+        padding-right: 20px; 
+    }
+
+    .slider {
+        flex-direction: column; /* Stack slider elements vertically */
+        align-items: center; /* Center the slider horizontally */
+    }
+
+    .slide-button {
+        width: 50px; /* Reduce button size */
+        height: 50px; 
+        margin-bottom: 10px; /* Add space between buttons and slider */
+    }
+	.right-button{
+		margin-top: 10px;
+	}
+
+    .slide-wrapper {
+        width: 100%; /* Make slider take full width */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    .slider-container {
+        gap: 30px; /* Reduce gap between cards */
+        padding-bottom: 20px; /* Reduce bottom padding */
+    }
+
+    .card { 
+        width: 220px; /* Reduce card width */
+    }
+
+    .card-image {
+        height: 120px; /* Reduce card image height */
+		object-fit: cover;
+    }
+}
+
+/* ********* video section ********** */
+
+
+@media (max-width: 768px) {
+   
+
+    .video-container iframe {
+        width: 95%; 
+        height: 300px;  
+    }
+	.video-container{
+		width: 400px;
+	}
+
+    .montserrat-700 {
+        font-size: 24px; 
+        line-height: 35px; 	
+    }
+
+    .montserrat-500 {
+        font-size: 14px; /* Adjust size as needed */
+    }
+}
+
+/* ****** request dish button ******** */
+
+
+@media (max-width: 768px) { 
+    /* ... (Your existing media query styles) ... */
+
+    .dish-modal-content {
+        height: 90vh; /* Take up more vertical space */
+        width: 95%;   /* Take up more horizontal space */
+        margin: 5vh auto; /* Reduce top/bottom margin */
+    }
+
+    .dish-modal-content h2 {
+        font-size: 24px; /* Reduce heading size */
+        padding-top: 30px; /* Reduce top padding */
+    }
+
+    .dishForm {
+        padding-top: 40px; /* Reduce top padding */
+    }
+
+    .dish-modal-content input[type="text"] {
+        width: 90%; /* Make input fields responsive */
+        height: 40px; /* Slightly reduce height */
+    }
+
+    .dish_button {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px; /* Reduce gap between buttons */
+        margin-top: 40px; /* Reduce top margin */
+        margin-bottom: 40px; /* Reduce bottom margin */
+    }
+
+    .dish-modal-content .cancelBtn, 
+    .dish-modal-content button[type="submit"] {
+        width: 80%; /* Make buttons responsive */
+    }
+}
+
+
+/* *********** form section *********** */
+
+@media (max-width: 768px) {
+   
+
+    .form-section {
+        flex-direction: column; /* Stack form and image vertically */
+        align-items: center; /* Center the content horizontally */
+        margin-left: 20px; /* Reduce margin on smaller screens */
+        margin-right: 20px; 
+    }
+
+    .form-container {
+        flex-direction: column; /* Stack form content and image */
+        align-items: center; 
+    }
+
+    .form-content {
+        width: 100%; /* Make form content take full width */
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack form fields vertically */
+        gap: 16px; /* Reduce gap between fields */
+    }
+
+    .form-image {
+        margin-top: 20px; /* Add space above the image */
+    }
+
+    .form-image img {
+        width: 90%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .form-title {
+        font-size: 20px; /* Reduce title font size */
+    }
+
+    .form-submit-button {
+        width: 20%; /* Make submit button responsive */
+    }
+}
+
+/* ************ footer ************ */
+
+@media (max-width: 768px) {
+    /* ... (Your existing media query styles) ... */
+
+    .parent_foot {
+        height: auto; /* Allow the footer to adjust its height */
+        padding-left: 20px; /* Reduce padding on smaller screens */
+        padding-right: 20px;
+    }
+
+    .foot {
+        flex-direction: column; /* Stack footer elements vertically */
+        align-items: flex-start; /* Align items to the left */
+		margin-left: 0px;
+    }
+
+	
+    .hero-nav-items {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px; /* Reduce gap between items */
+        margin-top: 20px; /* Add space above the navigation */
+		/* margin-left:0px; */
+
+    }
+
+    
+    .horizontal_line {
+        margin-top: 20px; /* Add space above the line */
+    }
+}
+
+@media (max-width: 768px) {
+    /* ... (Your existing media query styles) ... */
+
+    #parent_foot {
+        height: auto; /* Allow the footer to adjust its height */
+        padding-left: 20px; /* Reduce padding on smaller screens */
+        padding-right: 20px;
+    }
+
+    #foot_id {
+        flex-direction: column; /* Stack footer elements vertically */
+        align-items: center; /* Align items to the center */
+		/* margin-left: 100px; */
+    }
+
+    #hero-nav-items_id {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px; /* Reduce gap between items */
+        margin-top: 20px; /* Add space above the navigation */
+        display: flex; /* Make sure the navigation items are visible */
+        list-style: none; /* Remove bullet points */
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+		
+    }
+
+	.hero-nav-items {
+		margin-left:0px ;
+	}
+    #hero-search-cart_id {
+        margin-top: 20px; /* Add space above the buttons */
+        display: flex; /* Make sure the buttons are visible */
+        gap: 16px; /* space-x-4 */
+        height: 24px;
+		/* margin-left: 50px; */
+    }
+
+
+
+    .horizontal_line {
+        margin-top: 20px; /* Add space above the line */
+    }
+
+	
+}
+
+
+
+
+
+
